@@ -11,6 +11,6 @@ provider "azurerm" {
   features {}
 }
 resource "azurerm_resource_group" "rg" {
-  name     = "rg-devops-demo"
+  name     = "rg-devops-demo12"
   location = "East US"
 }

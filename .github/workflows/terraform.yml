@@ -28,6 +28,11 @@ jobs:
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
+      - name: Check Azure Account
+        shell: powershell
+        run: |
+          az account show
+          az account list --output table
 
       - name: Terraform Init
         run: terraform init
@@ -37,6 +42,11 @@ jobs:
 
       - name: Terraform Plan
         run: terraform plan
+      - name: Terraform Plan
+        run: terraform plan
+
+      - name: Terraform Apply
+        run: terraform apply -auto-approve
         
         
       - name: Terraform Apply
